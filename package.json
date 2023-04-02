@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "book-review-node-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darshi24/book-review-node-app.git"
+  },
+  "author": "Darshi Shah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darshi24/book-review-node-app/issues"
+  },
+  "homepage": "https://github.com/darshi24/book-review-node-app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
