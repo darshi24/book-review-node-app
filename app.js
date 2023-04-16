@@ -12,14 +12,15 @@ const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
 mongoose.connect(CONNECTION_STRING);
 
 const app = express();
+app.set('trust proxy',1);
 app.use(express.json());
 app.use(cors({
     credentials : true,
-    origin : 'http://localhost:3000'
+    origin : 'https://preeminent-cranachan-3c8ddf.netlify.app/'
 }));
 app.use(session({
     secret : 'process.env.SECRET',
-    cookie : {secure : false}
+    cookie : {secure : true}
 
 }))
 
