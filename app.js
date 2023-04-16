@@ -16,7 +16,7 @@ app.set('trust proxy',1);
 app.use(express.json());
 app.use(cors({
     credentials : true,
-    origin : 'https://preeminent-cranachan-3c8ddf.netlify.app/'
+    origin : 'https://preeminent-cranachan-3c8ddf.netlify.app'
 }));
 app.use(session({
     secret : 'process.env.SECRET',
