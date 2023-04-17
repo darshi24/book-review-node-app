@@ -17,8 +17,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     credentials : true,
-    // origin : 'https://preeminent-cranachan-3c8ddf.netlify.app'
-    origin : 'http://localhost:3000'
+    origin : 'https://preeminent-cranachan-3c8ddf.netlify.app'
+    // origin : 'http://localhost:3000'
 }));
 app.use(session({
     secret : 'process.env.SECRET',
