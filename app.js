@@ -13,7 +13,7 @@ const CONNECTION_STRING = "mongodb+srv://darshi24:darshi24@cluster0.wwke7rm.mong
 mongoose.connect(CONNECTION_STRING);
 
 const app = express();
-// app.set('trust proxy',1);
+app.set('trust proxy',1);
 app.use(express.json());
 app.use(cors({
     credentials : true,
