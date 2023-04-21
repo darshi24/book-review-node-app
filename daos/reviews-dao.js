@@ -4,6 +4,11 @@ export const getAllReviews = async() => {
     const reviews = await reviewsModel.find();
     return reviews;
 }
+
+export const findReviewByID = async(rid) => {
+    const review = await reviewsModel.findById(rid).populate("reviewerID").exec();
+    return review;
+}
 export const getReviewsForBookISBN = async(bookISBN) => {
     const reviews = await reviewsModel.find({bookISBN : bookISBN }).populate("reviewerID").exec();
     return reviews;
@@ -16,7 +21,8 @@ export const getReviewsForAuthor = async(authorID) => {
 
 export const createReview = async(review) => {
     const newReview = await reviewsModel.create(review);
-    return newReview;
+    const returnThisReview = await findReviewByID(newReview._id);
+    return returnThisReview;
 }
 export const updateReview = async(rid, review) => {
     const updatedReview = await reviewsModel.updateOne({_id : rid} , review);

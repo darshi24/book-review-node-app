@@ -5,7 +5,9 @@ const getAllReviews = async (req,res) => {
     res.json(reviews);
 }
 const getReviewsForBookISBN = async(req, res) => {
+    console.log("coming here...")
     const reviews = await reviewsDao.getReviewsForBookISBN(req.params.isbn);
+    console.log(reviews);
     res.json(reviews);
 }
 
