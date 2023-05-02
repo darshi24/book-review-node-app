@@ -60,6 +60,7 @@ const register = async(req, res) => {
 
 const profile = async (req, res) => {
     const currentUserSession = req.session["currentUser"];
+    console.log(req.session);
     console.log("Profile...")
     console.log(currentUserSession);
 
