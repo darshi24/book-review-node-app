@@ -34,6 +34,7 @@ const login = async(req, res) => {
         req.session["currentUser"] = existingUser;
         console.log("Log in...")
         console.log(req.session["currentUser"]);
+        console.log(req.session);
         res.json(existingUser)
     }else{
         res.sendStatus(403);
