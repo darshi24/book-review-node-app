@@ -17,14 +17,13 @@ app.set('trust proxy',1);
 app.use(express.json());
 app.use(cors({
     credentials : true,
-    origin : 'http://localhost:3000'
+    origin : 'https://preeminent-cranachan-3c8ddf.netlify.app/'
 }));
 app.use(session({
     secret : 'process.env.SECRET',
     resave : false,
     saveUninitialized : true,
-    cookie : {secure : false}
-
+    cookie : {secure : true}
 }))
 
 
