@@ -9,8 +9,7 @@ import ReviewsController from "./controllers/reviews-controller.js";
 import FollowsController from "./controllers/follows-controller.js";
 import WishlistController from "./controllers/wishlist-controller.js";
 
-// const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
-const CONNECTION_STRING = "mongodb+srv://darshi24:darshi24@cluster0.wwke7rm.mongodb.net/?retryWrites=true&w=majority";
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
 mongoose.connect(CONNECTION_STRING);
 
 const app = express();
