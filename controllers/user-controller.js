@@ -51,16 +51,16 @@ const register = async(req, res) => {
     if(foundUser) {
         res.status(409)
     }else{
-
         const newUser = await userDao.createUser(req.body);
         req.session["currentUser"] = newUser
+        console.log("Registering the user below...")
         console.log(req.session["currentUser"]);
         res.json(newUser);
     }
 }
 
 const profile = async (req, res) => {
-    const currentUserSession = req.session["currentUser"];
+    const currentUserSession = req.session.currentUser;
     console.log(req.session);
     console.log("Profile...")
     console.log(currentUserSession);
